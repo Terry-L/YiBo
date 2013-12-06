@@ -20,9 +20,6 @@ Apache Licence！
 -----YiBo  yibo的android源代码
 -----YiBoLibrary yibo的底层库，包括各平台封装
 
-维护人介绍
-=====
-欢迎联系新浪微博 @外号猫哥，支持社区开发捐赠:http://item.taobao.com/item.htm?id=23181704824 感谢您对社区的支持！
 
 版本声明
 =====
