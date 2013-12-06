@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:installLocation="auto"
+	package="com.shejiaomao.maobo"
+	android:versionName="2.9.0" 
+	android:versionCode="29000">
+	<application 
+	    android:name="com.shejiaomao.weibo.SheJiaoMaoApplication"
+	    android:icon="@drawable/icon"
+	    android:label="@string/app_name"
+		android:debuggable="false">
+		<activity android:name="com.shejiaomao.weibo.activity.HomePageActivity"
+		    android:label="@string/app_name"
+			android:theme="@style/Common_Theme"
+			android:launchMode="singleTask"
+			android:alwaysRetainTaskState="true"
+			android:windowSoftInputMode="stateUnspecified|adjustPan"
+			android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="com.shejiaomao.weibo.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.SplashActivity"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden"
+		    android:screenOrientation="portrait"
+		    android:alwaysRetainTaskState="true">
+		    <intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.AccountsActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.PassportActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.AddAccountActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+		
+        <activity android:name="com.shejiaomao.weibo.activity.AddConfigAppActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+		
+		<activity android:name="com.shejiaomao.weibo.activity.AuthorizeActivity"
+		    android:screenOrientation="behind"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.SettingActivity"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.MicroBlogActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.EditMicroBlogActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:windowSoftInputMode="stateVisible|adjustResize"
+		    android:configChanges="orientation|keyboardHidden" >
+		    <intent-filter android:label="@string/app_name">
+				<action android:name="android.intent.action.SEND">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:mimeType="image/*">
+				</data>
+			</intent-filter>
+			<intent-filter android:label="@string/app_name"	>
+				<action	android:name="android.intent.action.SEND">
+				</action>
+				<category android:name="android.intent.category.DEFAULT">
+				</category>
+				<data android:mimeType="text/plain">
+				</data>
+			</intent-filter>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.EditRetweetActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:windowSoftInputMode="stateVisible|adjustResize"
+		    android:configChanges="orientation|keyboardHidden" >
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.EditCommentActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:windowSoftInputMode="stateVisible|adjustResize"
+		    android:configChanges="orientation|keyboardHidden" >
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ProfileEditActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden" >
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ProfileActivity"
+		     android:screenOrientation="behind"
+		     android:theme="@style/Common_Theme"
+		     android:configChanges="orientation|keyboardHidden">
+             <intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+                 <data android:scheme="shejiaomao" android:host="info"/>
+             </intent-filter>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ConversationActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:windowSoftInputMode="stateHidden|adjustResize"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+		<activity android:name="com.shejiaomao.weibo.activity.EditDirectMessageActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:windowSoftInputMode="stateVisible|adjustResize"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.SocialGraphActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		    <intent-filter>
+				<action android:name="com.shejiaomao.weibo.SOCIAL_GRAPH" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.GroupActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.GroupMemberActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:windowSoftInputMode="stateHidden"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.MyStatusesActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.MyFavoritesActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ImageWebViewerActivity"
+		    android:screenOrientation="behind"
+			android:theme="@style/Common_Theme"
+			android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ImageViewerActivity"
+		    android:screenOrientation="behind"
+			android:theme="@style/Common_Theme"
+			android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.CropImageActivity"
+		    android:screenOrientation="behind"
+			android:theme="@style/Common_Theme"
+			android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ImageViewer4GifActivity"
+		    android:label="@string/app_image_viewer"
+		    android:screenOrientation="behind"
+			android:theme="@style/Common_Theme"
+            android:process=":image"
+	        android:launchMode="singleInstance"
+			android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+                 <data android:scheme="file"/>
+                 <data android:mimeType="image/*" />
+             </intent-filter>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.SearchActivity"
+		    android:screenOrientation="behind"
+			android:theme="@style/Common_Theme"
+			android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+                 <action android:name="android.intent.action.VIEW" />
+                 <category android:name="android.intent.category.DEFAULT" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+                 <data android:scheme="shejiaomao" android:host="topic"/>
+             </intent-filter>
+             <intent-filter>
+                 <action android:name="android.intent.action.SEARCH" />
+             </intent-filter>
+             <meta-data android:name="android.app.searchable"
+                 android:resource="@xml/searchable"/>
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.HotStatusesActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+		
+		<activity android:name="com.shejiaomao.weibo.activity.StatusSubscribeActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+      	<activity android:name="com.shejiaomao.weibo.activity.UserQuickSelectorActivity"
+      	    android:screenOrientation="behind"
+      	    android:theme="@style/Common_Theme"
+      	    android:configChanges="orientation|keyboardHidden"
+      	    android:windowSoftInputMode="stateHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.PublicTimelineActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+
+		<activity android:name="com.shejiaomao.weibo.activity.ThemeActivity"
+		    android:screenOrientation="behind"
+		    android:theme="@style/Common_Theme"
+		    android:configChanges="orientation|keyboardHidden">
+		</activity>
+		
+		<service android:name="com.shejiaomao.weibo.activity.AutoUpdateService">
+		</service>
+
+        <provider android:name="com.shejiaomao.weibo.activity.SearchCatalogProvider"
+            android:authorities="com.shejiaomao.weibo.search">
+        </provider>
+
+        <meta-data android:name="android.app.default_searchable"
+            android:value=".SearchActivity" />
+
+
+        <!-- 友盟 -->
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:exported="true"
+            android:process=":DownloadingService" >
+        </service>        
+		<meta-data android:value="5135b940527015355a00006c" android:name="UMENG_APPKEY" />
+		<!-- 发布渠道属性值请勿更改，使用Ant进行打包时会自行替换为相应渠道 -->
+		<meta-data android:value="github.com" android:name="UMENG_CHANNEL"/>
+		
+	</application>
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <supports-screens android:largeScreens="true" android:anyDensity="true" />
+
+	<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="8"/>
+</manifest>
